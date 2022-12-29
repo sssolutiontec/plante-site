@@ -89,10 +89,12 @@ $(function () {
 		$.ajax({
 			type: "POST",
 			url: actionUrl,
+			dataType : 'json', // data type
 			data: form.serialize(), // serializes the form's elements.
 			headers:{         
-				'Access-Control-Allow-Origin' : 'https://zebo.app',	
-				'Referrer-Policy' : 'no-referrer'
+				'Sec-Fetch-Mode' : 'cors',	
+				'Sec-Fetch-Site' : 'cross-site',
+				'Content-Type' : 'application/json'
 			},
 			success: function(data)
 			{
