@@ -92,6 +92,7 @@ $(function () {
 			data: form.serialize(), // serializes the form's elements.
 			headers:{         
 				'Access-Control-Allow-Origin' : 'https://zebo.app',	
+				'Referrer-Policy' : 'no-referrer'
 			},
 			success: function(data)
 			{
