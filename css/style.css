@@ -1066,10 +1066,7 @@ button {
     color: black;
 }
 
-/* form section starts here */
-.container1{
-    margin-left: 70px;
-}
+
 
 .form-css  {
     font-size: 26px;
@@ -1100,3 +1097,26 @@ label{
     border-radius: 8px;
     margin-bottom: 16px;
  }
+
+ /* form section starts here */
+.contact-div{
+    margin-left: 30rem;
+}
+
+@media screen and (min-width: 220px) and (max-width: 600px) { 
+    .google-contact {
+        width: 350px;
+    } 
+    .contact-div {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) { 
+    .google-contact {
+        width: 350px;
+    } 
+    .contact-div {
+        margin: 10rem;
+    }
+}
