@@ -1120,3 +1120,35 @@ label{
         margin: 10rem;
     }
 }
+
+/* Style for Extra Large Screen */
+@media (max-width:1199px) {
+    iframe {
+        width: 500px;
+        height: 800px;
+    }
+}
+
+/* Style for Large Screen */
+@media (max-width:991px) {
+    iframe {
+        width: 350px;
+        height: 700px;
+    }
+}
+
+/* Style for Medium Screen */
+@media (max-width:767px) {
+    iframe {
+        width: 320px;
+        height: 600px;
+    }
+}
+
+/* Style for Small Screen */
+@media (max-width:575px) {
+    iframe {
+        width: 180px;
+        height: 300px;
+    }
+}
