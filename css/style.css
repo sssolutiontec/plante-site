@@ -1105,11 +1105,11 @@ label{
 
 @media screen and (min-width: 220px) and (max-width: 600px) { 
     .google-contact {
-        width: 200px;
-        height: 600px;
+        width: 250px;
+        height: 500px;
     } 
     .contact-div {
-        margin: 0;
+        margin: 1rem;
     }
 }
 
