@@ -1103,3 +1103,22 @@ label{
     margin-left: 30rem;
 }
 
+@media screen and (min-width: 220px) and (max-width: 600px) { 
+    .google-contact {
+        width: 200px;
+        height: 600px;
+    } 
+    .contact-div {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1199px) { 
+    .google-contact {
+        width: 350px;
+        height: 800px;
+    } 
+    .contact-div {
+        margin: 10rem;
+    }
+}
