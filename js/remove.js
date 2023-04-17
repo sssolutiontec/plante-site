@@ -3,7 +3,6 @@ function onloadRemove() {
   //setInterval - for again and again
   setTimeout(
     function () {
-      alert("hi")
       const frames = document.getElementsByTagName("iframe");
       if (frames) {
         for (let index = 0; index < frames.length; index++) {
@@ -13,20 +12,21 @@ function onloadRemove() {
             removeInternalDiv(innerDoc)
         }
       }
-      alert("bye")
     }, (oneSec * 5));
 }
 
 function removeInternalDiv(doc) {
   if (!doc)
     return
-  var elements = doc.getElementsByClassName("tawk-card tawk-card-inverse tawk-card-xsmall tawk-footer tawk-flex-none")
+  var elements = doc.getElementsByClassName("tawk-branding")
   console.log(elements)
   if (elements) {
     for (let index = 0; index < elements.length; index++) {
       const element = elements[index];
       console.log(element)
-      element.remove()
+      element.innerHTML = "";
+      if (element.href)
+        element.href = "#"
     }
   }
 }
