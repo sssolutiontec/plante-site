@@ -1,9 +1,9 @@
 const oneSec = 1000
 window.Tawk_API = window.Tawk_API || {};
 window.onload = (event) => {
+  setTimeout(lookInAllIframe, (oneSec * 3));
   setTimeout(lookInAllIframe, (oneSec * 5));
   setTimeout(lookInAllIframe, (oneSec * 7));
-  setTimeout(lookInAllIframe, (oneSec * 10));
 };
 window.Tawk_API.onChatMaximized = function(){
   setTimeout(lookInAllIframe, (oneSec * 0.1));
@@ -27,11 +27,9 @@ function removeInternalDiv(doc) {
   if (!doc)
     return
   var elements = doc.getElementsByClassName("tawk-branding")
-  console.log(elements)
   if (elements) {
     for (let index = 0; index < elements.length; index++) {
       const element = elements[index];
-      console.log(element)
       element.innerHTML = "";
       if (element.href)
         element.href = "plantehouse.com"
