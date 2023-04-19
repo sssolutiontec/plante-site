@@ -1108,26 +1108,22 @@ label{
  }
 
  /* form section starts here */
-.contact-div{
-    margin-left: 30rem;
-}
-
 @media screen and (min-width: 220px) and (max-width: 600px) { 
     .google-contact {
         width: 250px;
         height: 500px;
     } 
     .contact-div {
-        margin: 1rem;
+        margin-left: 1rem;
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1199px) { 
+@media screen and (min-width: 601px) and (max-width: 999999px) { 
     .google-contact {
         width: 350px;
         height: 800px;
     } 
     .contact-div {
-        margin: 10rem;
+        margin-left: 30rem;
     }
 }
