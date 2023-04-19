@@ -20,7 +20,7 @@ function lookInAllIframe() {
       var innerDoc = undefined
       try {
         innerDoc = frame.contentDocument || frame.contentWindow.document;
-      } catch (error) { return }
+      } catch (error) { continue }
       if (innerDoc)
         removeInternalDiv(innerDoc)
     }
