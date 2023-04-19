@@ -1,7 +1,8 @@
 window.Tawk_API = window.Tawk_API || {};
 window.Tawk_API.onChatMaximized = function(){
   const oneSec = 1000
-  setTimeout(lookInAllIframe, (oneSec * 0.2));
+  setTimeout(lookInAllIframe, (oneSec * 0.1));
+  setTimeout(lookInAllIframe, (oneSec * 0.3));
   setTimeout(lookInAllIframe, (oneSec * 1));
 };
 
@@ -21,14 +22,13 @@ function removeInternalDiv(doc) {
   if (!doc)
     return
   var elements = doc.getElementsByClassName("tawk-branding")
-  console.log(elements)
   if (elements) {
     for (let index = 0; index < elements.length; index++) {
       const element = elements[index];
-      console.log(element)
       element.innerHTML = "";
       if (element.href)
-        element.href = "#"
+        element.href = "plantehouse.com"
+      element.remove();
     }
   }
 }
