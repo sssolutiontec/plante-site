@@ -1,9 +1,9 @@
+const oneSec = 1000
 window.Tawk_API = window.Tawk_API || {};
 window.Tawk_API.onLoad = function(){
   setTimeout(lookInAllIframe, (oneSec * 0.2));
 };
 window.Tawk_API.onChatMaximized = function(){
-  const oneSec = 1000
   setTimeout(lookInAllIframe, (oneSec * 0.1));
   setTimeout(lookInAllIframe, (oneSec * 0.4));
   setTimeout(lookInAllIframe, (oneSec * 1));
