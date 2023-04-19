@@ -1,9 +1,9 @@
 const oneSec = 1000
 window.Tawk_API = window.Tawk_API || {};
 window.onload = (event) => {
-  setTimeout(lookInAllIframe, (oneSec * 0.5));
   setTimeout(lookInAllIframe, (oneSec * 1));
-  setTimeout(lookInAllIframe, (oneSec * 2));
+  setTimeout(lookInAllIframe, (oneSec * 3));
+  setTimeout(lookInAllIframe, (oneSec * 5));
   setTimeout(lookInAllIframe, (oneSec * 7));
 };
 window.Tawk_API.onChatMaximized = function () {
