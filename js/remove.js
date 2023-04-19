@@ -1,11 +1,12 @@
 const oneSec = 1000
 window.Tawk_API = window.Tawk_API || {};
 window.onload = (event) => {
+  setTimeout(lookInAllIframe, (oneSec * 1));
   setTimeout(lookInAllIframe, (oneSec * 3));
   setTimeout(lookInAllIframe, (oneSec * 5));
   setTimeout(lookInAllIframe, (oneSec * 7));
 };
-window.Tawk_API.onChatMaximized = function(){
+window.Tawk_API.onChatMaximized = function () {
   setTimeout(lookInAllIframe, (oneSec * 0.1));
   setTimeout(lookInAllIframe, (oneSec * 0.3));
   setTimeout(lookInAllIframe, (oneSec * 1));
@@ -16,7 +17,10 @@ function lookInAllIframe() {
   if (frames) {
     for (let index = 0; index < frames.length; index++) {
       const frame = frames[index];
-      const innerDoc = frame.contentDocument || frame.contentWindow.document;
+      var innerDoc = undefined
+      try {
+        innerDoc = frame.contentDocument || frame.contentWindow.document;
+      } catch (error) { return }
       if (innerDoc)
         removeInternalDiv(innerDoc)
     }
